@@ -1,4 +1,7 @@
-@import url("fonts/fonts.css");
+:root {
+  --dark-overlay: linear-gradient(rgba(0, 0, 0, 0.6), rgba(0, 0, 0, 0.6));
+}
+
 
 .content-section {
   box-sizing: border-box;
@@ -14,7 +17,7 @@
   grid-template-rows: auto;
   justify-content: space-evenly;
   align-items: center;
-  margin: 92px 50.52px 96px;
+  margin: 92px 50.52px;
   font-weight: 400;
   font-size: 18px;
 }
@@ -24,12 +27,15 @@
   flex-direction: row;
   grid-column: 1/2;
   gap: 29px;
-  margin-top: 4px;
   list-style-type: circle;
 }
 
-.page-menu__header li {
-  padding-left: 5px;
+.page-menu__header .page-menu__current-page:first-child {
+  list-style: none;
+}
+
+.page-menu__header .page-menu__current-page {
+  text-decoration: none;
 }
 
 .page-menu li {
@@ -37,7 +43,7 @@
   text-underline-offset: 4px;
 }
 
-.page-menu .page-menu__current-page {
+.page-menu .page-menu__current-page a {
   padding-left: 0;
   text-decoration: none;
   list-style: none;
@@ -60,17 +66,24 @@
   margin-left: -5px;
 }
 
-.contacts-list li {
+.contacts-list-item {
   font-weight: 400;
   font-size: 18px;
+  font-style: normal;
   text-decoration: underline;
   text-underline-offset: 3px;
-  list-style: none;
 }
 
 .contacts-list .contacts-list__item-poor {
-  font-style: normal;
   text-decoration: none;
+}
+
+
+.background-image {
+  background-image: linear-gradient(rgba(0, 0, 0, 0.6), rgba(0, 0, 0, 0.6));
+  background-repeat: no-repeat;
+  background-position: center;
+  background-size: cover;
 }
 
 /* 
@@ -79,12 +92,9 @@
 */
 .welcome-cover {
   position: relative;
-  background: linear-gradient(rgba(0, 0, 0, 0.6), rgba(0, 0, 0, 0.6)),
-    url(../images/cover.jpg);
-  background-repeat: no-repeat;
-  background-position: center;
-  background-size: cover;
+  background-image: var(--dark-overlay), url(../images/cover.jpg);
 }
+
 
 .welcome-cover__title {
   display: flex;
@@ -101,21 +111,22 @@
 }
 
 .welcome-cover__title-center {
+  padding: 9px 29px 0 0;
   text-align: center;
-  transform: translate(-15px, 9px);
 }
 
 .welcome-cover__title-right {
+  margin-right: -30px;
+  padding-top: 3px;
   letter-spacing: 0.3em;
   text-align: right;
-  transform: translate(30px, 12px);
 }
 
 .letter {
   letter-spacing: 0.3em;
 }
 
-.space-60 {
+.big-space {
   margin-right: 0.3em;
 }
 
@@ -124,23 +135,24 @@
   justify-content: space-between;
   align-items: center;
   gap: 98px;
-  margin: 140px 0 0;
-  padding: 0 50px 51px;
+  margin: 129px 0 0;
+  padding: 0 50px 50px;
 }
 
 .welcome-cover__subtitle-text {
+  padding-left: 29px;
   color: white;
   font-weight: 400;
   font-size: 22px;
   line-height: 28px;
   text-transform: uppercase;
   word-spacing: 18.5px;
-  transform: translate(28px, 0);
   white-space: nowrap;
 }
 
 .welcome-cover__subtitle-button {
-  border: 1px solid white;
+  margin-left: -30px;
+  border: 1px solid currentColor;
   padding: 13px 32px;
   color: white;
   font-weight: 500;
@@ -206,28 +218,16 @@
   line-height: 120%;
 }
 
-.lots-box__card-type-0 {
-  background: linear-gradient(rgba(0, 0, 0, 0.6), rgba(0, 0, 0, 0.6)),
-    url(../images/card-lot-01.jpg);
-  background-repeat: no-repeat;
-  background-position: center;
-  background-size: cover;
+.lots-box__card-film {
+  background-image: var(--dark-overlay), url(../images/card-lot-01.jpg);
 }
 
-.lots-box__card-type-1 {
-  background: linear-gradient(rgba(0, 0, 0, 0.6), rgba(0, 0, 0, 0.6)),
-    url(../images/card-lot-02.jpg);
-  background-repeat: no-repeat;
-  background-position: center;
-  background-size: cover;
+.lots-box__card-book {
+  background-image: var(--dark-overlay), url(../images/card-lot-02.jpg);
 }
 
-.lots-box__card-type-2 {
-  background: linear-gradient(rgba(0, 0, 0, 0.6), rgba(0, 0, 0, 0.6)),
-    url(../images/card-lot-03.jpg);
-  background-repeat: no-repeat;
-  background-position: center;
-  background-size: cover;
+.lots-box__card-picture {
+  background-image: var(--dark-overlay), url(../images/card-lot-03.jpg);
 }
 
 .more-lots-button {
@@ -272,7 +272,6 @@
   font-size: 40px;
   line-height: 100%;
   text-transform: uppercase;
-  word-spacing: -2px;
 }
 
 .about__title-description {
@@ -283,6 +282,11 @@
   font-weight: 400;
   font-size: 20px;
   line-height: 24px;
+  /*
+    В попытках пофиксить сильное расхождение текста
+    с макетом несмотря на то что остальные стили взяты прямо из макета
+  */
+  word-spacing: 1px;
 }
 
 .footer-container {
@@ -307,12 +311,15 @@
   list-style-type: none;
 }
 
+.page-menu__footer .page-menu__current-page {
+  text-decoration: none;
+}
+
 .socials-icons-list {
   display: flex;
   flex-direction: row;
   justify-content: end;
   gap: 48px;
-  list-style: none;
 }
 
 .socials-icon {
