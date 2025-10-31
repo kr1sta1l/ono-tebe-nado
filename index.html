@@ -14,7 +14,9 @@
       <div class="header-container">
         <nav class="page-menu">
           <ul class="page-menu__header">
-            <li class="page-menu__current-page">главная</li>
+            <li class="page-menu__current-page">
+              <a href="#0">главная</a>
+            </li>
             <li>
               <a href="#lots"> посмотреть лоты </a>
             </li>
@@ -30,42 +32,36 @@
             alt="Черное лого 'Оно тебе надо'"
           >
         </a>
-        <ul class="contacts-list contacts-list__header">
-          <li>
-            <a href="tel:+99995555555" class="contacts-link">+9 999 555 5555</a>
-          </li>
-          <li>
-            <a href="mailto:info@sobaka.ge" class="contacts-link"
+        <address class="contacts-list contacts-list__header">
+          <a href="tel:+99995555555" class="contacts-list-item contacts-link">+9 999 555 5555</a>
+          <a href="mailto:info@sobaka.ge" class="contacts-list-item contacts-link"
               >info@sobaka.ge</a
             >
-          </li>
-          <li class="contacts-list__item-poor">
-            <address class="contacts-list__item-poor">
-              наб. Принсенграхт 263- 265, Амстердам
-            </address>
-          </li>
-        </ul>
+          <p class="contacts-list-item contacts-list__item-poor">
+            наб. Принсенграхт 263- 265, Амстердам
+          </p>
+        </address>
       </div>
     </header>
 
     <main class="content-section">
-      <section class="welcome-cover">
+      <section class="welcome-cover background-image">
         <h1 class="welcome-cover__title">
           <span class="welcome-cover__title-left">
-            <span class="letter space-60">он</span><span class="letter">о</span>
+            <span class="letter big-space">он</span><span class="letter">о</span>
           </span>
           <span class="welcome-cover__title-center">
-            <span class="letter space-60">теб</span
+            <span class="letter big-space">теб</span
             ><span class="letter">е</span>
           </span>
           <span class="welcome-cover__title-right">
-            <span class="letter space-60">н</span
+            <span class="letter big-space">н</span
             ><span class="letter">адо</span>
           </span>
         </h1>
         <div class="welcome-cover__subtitle">
-          <span class="welcome-cover__subtitle-text"
-            >аукцион вещей, в которые никто не верил</span
+          <p class="welcome-cover__subtitle-text"
+            >аукцион вещей, в которые никто не верил</p
           >
           <a class="welcome-cover__subtitle-button" href="#bet"
             >сделать ставку</a
@@ -76,7 +72,7 @@
       <section class="lots-box">
         <h2 class="lots-box__title">лоты</h2>
         <ul class="lots-box__items">
-          <li class="lots-box__item lots-box__card-type-0">
+          <li class="lots-box__item lots-box__card-film background-image">
             <a href="#lot-1" class="lots-box__item-link">
               <h3 class="lots-box__item-title">
                 Фильм режиссёра, который бросил киношколу
@@ -87,7 +83,7 @@
               </p>
             </a>
           </li>
-          <li class="lots-box__item lots-box__card-type-1">
+          <li class="lots-box__item lots-box__card-book background-image">
             <a href="#lot-2" class="lots-box__item-link">
               <h3 class="lots-box__item-title">
                 Книга, где описан один скучный день из жизни рекламного агента
@@ -102,7 +98,7 @@
               </p>
             </a>
           </li>
-          <li class="lots-box__item lots-box__card-type-2">
+          <li class="lots-box__item lots-box__card-picture background-image">
             <a href="#lot-3" class="lots-box__item-link">
               <h3 class="lots-box__item-title">
                 Картина, которую повторит даже 5-летний сын маминой подруги
@@ -133,7 +129,7 @@
           <div class="about__title-description">
             <p>
               Здесь вы не встретите очередное пафосное собрание невероятно
-              дорогого антиквариата. Наши лоты вообще не должны были попасть<br>
+              дорогого антиквариата. Наши лоты вообще не должны были попасть
               ни на один аукцион. Потому что кому нужен дневник
               девочки-подростка или картина, которую может нарисовать даже
               ребёнок? Кому нужны все эти странные вещи, созданные любителями?
@@ -142,7 +138,7 @@
               Слишком сложные или, наоборот, слишком простые. Опережающие своё
               время. В пух и прах растерзанные критиками. Непринятые и
               непонятые. Когда-то они казались просто неудачными. Но,
-              несмотря<br>на критику, кажущуюся простоту или сложность, сейчас
+              несмотря на критику, кажущуюся простоту или сложность, сейчас
               без этих лотов невозможно представить современную культуру. Когда
               в эти вещи не верил никто, продолжали верить их создатели. И
               сейчас эти лоты стали культовыми.
@@ -154,27 +150,21 @@
 
     <footer class="content-section footer">
       <div class="footer-container">
-        <ul class="contacts-list contacts-list__footer">
-          <li>
-            <a href="tel:+99995555555" class="contacts-link">
-              +9 999 555 5555
-            </a>
-          </li>
-          <li>
-            <a href="mailto:info@sobaka.ge" class="contacts-link">
-              info@sobaka.ge
-            </a>
-          </li>
-          <li class="contacts-list__item-poor">
-            <address class="contacts-list__item-poor">
-              наб. Принсенграхт 263- 265, Амстердам
-            </address>
-          </li>
-        </ul>
+        <address class="contacts-list contacts-list__footer">
+          <a href="tel:+99995555555" class="contacts-list-item contacts-link">+9 999 555 5555</a>
+          <a href="mailto:info@sobaka.ge" class="contacts-list-item contacts-link"
+              >info@sobaka.ge</a
+            >
+          <p class="contacts-list-item contacts-list__item-poor">
+            наб. Принсенграхт 263- 265, Амстердам
+          </p>
+        </address>
 
         <nav class="page-menu">
           <ul class="page-menu__footer">
-            <li class="page-menu__current-page">главная</li>
+            <li class="page-menu__current-page">
+              <a href="#0">главная</a>
+            </li>
             <li>
               <a href="#lots"> посмотреть лоты </a>
             </li>
@@ -184,35 +174,29 @@
           </ul>
         </nav>
 
-        <ul class="socials-icons-list">
-          <li>
-            <a href="#yt">
-              <img
-                src="images/yt.svg"
-                alt="Мы на YouTube"
-                class="socials-icon"
-              >
-            </a>
-          </li>
-          <li>
-            <a href="#vk">
-              <img
-                src="images/vk.svg"
-                alt="Мы во ВКонтакте"
-                class="socials-icon"
-              >
-            </a>
-          </li>
-          <li>
-            <a href="#pinterest">
-              <img
-                src="images/pinterest.svg"
-                alt="Мы в Pinterest"
-                class="socials-icon"
-              >
-            </a>
-          </li>
-        </ul>
+        <address class="socials-icons-list">
+          <a href="#yt">
+            <img
+              src="images/yt.svg"
+              alt="Мы на YouTube"
+              class="socials-icon"
+            >
+          </a>
+          <a href="#vk">
+            <img
+              src="images/vk.svg"
+              alt="Мы во ВКонтакте"
+              class="socials-icon"
+            >
+          </a>
+          <a href="#pinterest">
+            <img
+              src="images/pinterest.svg"
+              alt="Мы в Pinterest"
+              class="socials-icon"
+            >
+          </a>
+        </address>
       </div>
     </footer>
   </body>
