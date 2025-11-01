@@ -13,7 +13,7 @@
 
 .header-container {
   display: grid;
-  grid-template-columns: 2fr 1.6fr 1.1fr;
+  grid-template-columns: 2fr 1.5fr 1.2fr;
   grid-template-rows: auto;
   justify-content: space-evenly;
   align-items: center;
@@ -63,7 +63,7 @@
 
 .contacts-list__header {
   grid-column: 3/4;
-  margin-left: -5px;
+  margin-left: 16px;
 }
 
 .contacts-list-item {
@@ -116,10 +116,10 @@
 }
 
 .welcome-cover__title-right {
-  margin-right: -30px;
+  margin-left: 5.83em;
   padding-top: 3px;
   letter-spacing: 0.3em;
-  text-align: right;
+  text-align: center;
 }
 
 .letter {
@@ -132,9 +132,8 @@
 
 .welcome-cover__subtitle {
   display: flex;
-  justify-content: space-between;
   align-items: center;
-  gap: 98px;
+  gap: 77px;
   margin: 129px 0 0;
   padding: 0 50px 50px;
 }
@@ -151,7 +150,6 @@
 }
 
 .welcome-cover__subtitle-button {
-  margin-left: -30px;
   border: 1px solid currentColor;
   padding: 13px 32px;
   color: white;
